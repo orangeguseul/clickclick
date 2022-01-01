@@ -14,26 +14,26 @@ $mainclick.addEventListener("click", ()=>{
         $clickboard.classList.add('click');
         $timer.classList.add('timer');
         $guide.innerText = '측정 중...';
-        start_timer()
+        timer =
+            setInterval(function() {
+                    console.log('start-timer 2')
+                    time += 1;
+                    $timer.innerText = time + `초`;
+                }, 1000);
+        hello()
+        scene = 1;
     }else if (scene === 1){
         click += 1;
         $clickboard.innerText = click;
     }
 })
-function start_timer() {
-    console.log('start timer');
-    timer
-    scene = 1;
+const hello = () =>{
+ setTimeout(function(){
+     $timer.innerText = `10초`
+     $guide.innerText = '측정 완료';
+     $clickboard.innerText = click +'번';
+     clearInterval(timer);
+     scene = 3
+    }, 11000)
 }
-setTimeout(function(){
-    clearInterval(timer);
-    scene = 3;
-    $timer.innerText = `10초`
-    $guide.innerText = '측정 완료';
-    $clickboard.innerText = click +'번';
-}, 11000)
-const timer = setInterval(function() {
-                console.log('start-timer 2')
-                time += 1;
-                $timer.innerText = time + `초`;
-            }, 1000);
+    
