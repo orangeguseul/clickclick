@@ -28,12 +28,12 @@ $mainclick.addEventListener("click", ()=>{
     }
 })
 const hello = () =>{
- setTimeout(function(){
-     $timer.innerText = `10초`
-     $guide.innerText = '측정 완료';
-     $clickboard.innerText = click +'번';
-     clearInterval(timer);
-     scene = 3
+    setTimeout(function(){
+        $timer.innerText = `10초`
+        $guide.innerText = '측정 완료';
+        $clickboard.innerText = click +'번';
+        scene = 3;
+       clearInterval(timer);
     }, 11000)
 }
     
