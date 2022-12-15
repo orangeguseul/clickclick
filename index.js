@@ -13,7 +13,7 @@ $mainclick.addEventListener("click", ()=>{
         $timer.classList.remove('invisible');
         $clickboard.classList.add('click');
         $timer.classList.add('timer');
-        $guide.innerText = '측정 중...';
+        $guide.innerText = '도전 중...';
         timer =
             setInterval(function() {
                     console.log('start-timer 2')
@@ -30,9 +30,14 @@ $mainclick.addEventListener("click", ()=>{
 const hello = () =>{
     setTimeout(function(){
         $timer.innerText = `10초`
-        $guide.innerText = '측정 완료';
+        $guide.innerText = '도전 완료';
         $clickboard.innerText = click +'번';
         scene = 3;
+        if (109 >click > 84) {
+            $guide.innerText = `맛있는 과자 1개`
+        }else if (click > 109 ) {
+            $guide.innerText = `겁나 맛있는 과자 2개`
+        }
        clearInterval(timer);
     }, 11000)
 }
